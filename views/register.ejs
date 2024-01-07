@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    <link rel="stylesheet" href="/RegistrationStyle.css">
+
+</head>
+<body>
+    
+<div class="container">
+<div class="inputfield">
+    <label for="">Name</label>
+    <input type="text"  id="name" placeholder="Enter your name">
+</div>
+<br/>
+<div class="inputfield">
+    <label for="">username</label>
+    <input type="text" id="username" placeholder="Enter your username">
+</div>
+<br/>
+<div class="inputfield">
+    <label for="">email</label>
+    <input type="email" id="email" placeholder="Enter your gmail">
+</div>
+<br/>
+<div class="inputfield">
+    <label for="">STD</label>
+    <input type="text" id="std" placeholder="Enter your class">
+</div>
+<br/>
+<div class="inputfield">
+    <label for="">Phone Number</label>
+    <input type="text" id="phoneNumber" placeholder="Enter your class">
+</div>
+<br/>
+<div class="inputfield">
+    <label for="">Password</label>
+    <input type="password"id="password" placeholder="Enter your Password">
+</div>
+<br/>
+<div class="inputfield">
+    <label for="">Confirm Password</label>
+    <input type="password" id="confirmPassword" placeholder="Confirm password">
+</div>
+<br/>
+<br/>
+<div id="submitbtn">
+    <button id="submitbtn"onclick="callregisterapi()">Sign Up</button>
+   
+</div>
+
+
+
+</div>
+
+ 
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="/RegistrationScript.js"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+     <link rel="stylesheet" href="/DashboardStyle.css">
+ </head>
+ <body  >
+  <main>
+      <div>Tweet</div>
+      <div id="create--boxt">
+        <label for="">Title: </label>
+          <input  id="title" type="text" required> 
+          <br/>
+          <label for="">Text: </label>
+          <input  id="text" type="text" required> 
+          <br/>
+          <br/>
+           <button onclick="createTweet()">Create Tweet</button>  
+      </div>
+
+      <div id="search-box">
+          <button onclick="getAllTweets()">My Tweets</button><button onclick="getTweetFeed()">TweetFeed</button>
+      </div>
+      <!-- display  tasks -->
+      <div id="tweet-list-box">
+
+      </div>
+  </main>
+
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+     <script src="/DashboardScript.js"></script>
+ </body>
+ </html>

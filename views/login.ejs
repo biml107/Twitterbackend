@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="/LoginStyle.css">
+</head>
+<body>
+    <div class="container">
+
+      
+        <br/>
+        <div class="inputfield">
+            <label for="">Username or Email id</label>
+            <input type="text" id="loginId" placeholder="Enter your username">
+        </div>
+        <br/>
+        <br/>
+        <div class="inputfield">
+            <label for="">Password</label>
+            <input type="password"id="password" placeholder="Enter your Password">
+        </div>
+        <br/>
+        <div>
+            <button id="signinbtn" onclick="callLoginApi()">sign in</button>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="/LoginScript.js"></script>
+</body>
+</html>
