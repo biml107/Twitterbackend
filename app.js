@@ -17,8 +17,10 @@ const FollowController = require('./Controller/FollowController');
 
 const app= express();
 const bmlkumar2000Project0URI=process.env.bmlkumar2000Project0URI;
+const SESSIONKEY=process.env.SESSIONKEY;
+const PORT=process.env.PORT;
 //connectDb
-mongoose.connect(`${privateConstants.bmlkumar2000Project0URI}`,{
+mongoose.connect(`${bmlkumar2000Project0URI}`,{
     //useNewUrlParser:true,
     //useUnifiedTopology:true
 }).then(res=>{
@@ -44,12 +46,12 @@ app.use(express.static('public'));
 //EJS VIW engine
 app.set('view engine','ejs');
 const store = new MongoDBSession({
-    uri : `${privateConstants.bmlkumar2000Project0URI}`,
+    uri : `${bmlkumar2000Project0URI}`,
     collection : 'tb_session'
 });
 
 app.use(session({
-    secret:privateConstants.SESSIONKEY,
+    secret:SESSIONKEY,
     resave: false,
     saveUninitialized: false,
     store:store
@@ -76,6 +78,6 @@ app.use('/follow',FollowController);
 
 //about process.env.PORT
 //The process object is a global that provides information about, and control over, the current Node.js process. As a global, it is always available to Node.js applications without using require().
-app.listen(process.env.PORT||3000,()=>{
-    console.log('Listening on port 3000');
+app.listen(PORT||3000,()=>{
+    console.log('Listening on port  '+PORT);
 })
