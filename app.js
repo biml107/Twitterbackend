@@ -5,7 +5,7 @@ const session= require('express-session');
 const MongoDBSession = require('connect-mongodb-session')(session);
 const mongoose= require('mongoose');
 
-const privateConstants = require('./private-constants');
+//const privateConstants = require('./private-constants');
 
 //Routes import
 const AuthController = require('./Controller/AuthController');
@@ -16,7 +16,7 @@ const FollowController = require('./Controller/FollowController');
 //Files Imports
 
 const app= express();
-
+const bmlkumar2000Project0URI=process.env.bmlkumar2000Project0URI;
 //connectDb
 mongoose.connect(`${privateConstants.bmlkumar2000Project0URI}`,{
     //useNewUrlParser:true,
